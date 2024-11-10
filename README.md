@@ -1,4 +1,4 @@
-# 🌤️ Weather SPA - Aplicación de Clima
+# ☼ Weather Forecast ☼
 
 Aplicación web de una sola página (SPA) para visualizar el pronóstico del clima actual y de los próximos días en función de la ubicación actual o de una búsqueda por ciudad. La app utiliza la API de **OpenWeatherMap** y está desarrollada con **JavaScript**, **jQuery**, y **SCSS** para una experiencia de usuario fluida y responsiva.
 
@@ -52,7 +52,9 @@ La estructura del proyecto es la siguiente:
 ```
 📦 nombre-del-repositorio
  ┣ 📂 css
- ┃ ┣ 📜 style.css           # CSS principal compilado desde SCSS
+ ┃ ┣ 📜 style.css            # CSS principal compilado desde SCSS
+ ┃ ┣ 📜 style.css.map
+ ┣ 📂 sass      
  ┃ ┣ 📜 _variables.scss      # Variables de colores y estilos
  ┃ ┣ 📜 _mixins.scss         # Mixins reutilizables
  ┃ ┣ 📜 _icons.scss          # Estilos para los iconos del clima
@@ -110,3 +112,4 @@ Este proyecto está licenciado bajo la [MIT License](https://opensource.org/lice
 ### 👩‍💻 Desarrollado por
 
 Ibai Loharces
+
