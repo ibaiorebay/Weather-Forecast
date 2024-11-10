@@ -22,7 +22,7 @@ $(document).ready(function () {
   }
 
   function fetchForecastData(lat, lon, containerId) {
-    const apiKey = "bf99cd895b793ffe57120e9b3f5473a2";
+    const apiKey = "TU_API_KEY";
     const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}&lang=es`;
 
     $.ajax({
@@ -36,6 +36,46 @@ $(document).ready(function () {
         alert("Error al obtener los datos del clima.");
       },
     });
+  }
+
+  $("#search-btn").click(function () {
+    const city = $("#city-input").val();
+    fetchCityWeather(city);
+  });
+
+  function fetchCityWeather(city) {
+    const apiKey = "bf99cd895b793ffe57120e9b3f5473a2";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}&lang=es`;
+
+    $.ajax({
+      url: apiUrl,
+      method: "GET",
+      success: function (data) {
+        $("#searched-city-name").text(data.city.name);
+        displayDailyForecast(data.list, "#searched-hourly-forecast");
+        $("#city-weather-content").show();
+      },
+      error: function () {
+        alert("Error al obtener los datos del clima.");
+      },
+    });
+  }
+
+  function getWeatherIcon(weatherCondition) {
+    switch (weatherCondition) {
+      case "Clear":
+        return "bi-sun";
+      case "Clouds":
+        return "bi-cloud-sun";
+      case "Rain":
+        return "bi-cloud-rain";
+      case "Snow":
+        return "bi-snow";
+      case "Fog":
+        return "bi-cloud-fog";
+      default:
+        return "bi-cloud";
+    }
   }
 
   function displayDailyForecast(forecastList, containerId) {
