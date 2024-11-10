@@ -1,0 +1,14 @@
+.btn {
+    @include transition(background-color, 0.3s);
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  
+  .day-card {
+    background-color: $card-background;
+    border-radius: $border-radius;
+    padding: 15px;
+    margin: 10px 0;
+    @include box-shadow(0px, 2px, 10px, rgba(0, 0, 0, 0.1));
+  }
