@@ -113,9 +113,3 @@ Este proyecto está licenciado bajo la [MIT License](https://opensource.org/lice
 
 Ibai Loharces
 
-.╔══════════════╗
- ╬  ▒▒▒▒    c   ║
- ╬ ╞═© ▒      ▽║
- ╬  ▒▒▒▒  D     ║
- ╚══════════════╝
-
